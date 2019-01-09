@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1>Welcome to Planner</h1>
+    <a href="<c:url value="/login" />">Sign in</a> |
     <a href="<c:url value="/register" />">Register</a>
   </body>
 </html>

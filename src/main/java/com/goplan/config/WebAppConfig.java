@@ -18,23 +18,23 @@ import java.io.IOException;
 @EnableWebMvc
 @ComponentScan("com.goplan")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
-    @Override
+    /*@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/pages/**").addResourceLocations("/pages/");
-        registry.addResourceHandler("/tmp/uploads/**").addResourceLocations("/tmp/uploads/");
+        registry.addResourceHandler("/pages*//**").addResourceLocations("/pages/");
+        registry.addResourceHandler("/tmp/uploads*//**").addResourceLocations("/tmp/uploads/");
         registry.addResourceHandler("/favicon.ico").addResourceLocations("/favicon.ico");
-    }
+    }*/
 
-    @Override
+   /* @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         super.addViewControllers(registry);
         registry.addViewController("/login");
-    }
+    }*/
 
     @Bean
     public InternalResourceViewResolver setupViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/pages/");
+        resolver.setPrefix("/WEB-INF/view/");
         resolver.setSuffix(".jsp");
         resolver.setViewClass(JstlView.class);
         resolver.setContentType("text/html; charset=utf-8");
