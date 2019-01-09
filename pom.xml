@@ -7,6 +7,7 @@
     <groupId>com.goplan</groupId>
     <artifactId>goplan</artifactId>
     <version>1.0</version>
+    <packaging>war</packaging>
 
     <properties>
         <spring.version>4.3.18.RELEASE</spring.version>
@@ -125,4 +126,38 @@
         </dependency>
 
     </dependencies>
+    <build>
+        <finalName>GoPlan</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>redeploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- id-шник из settings.xml -->
+                    <server>apache-tomcat</server>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
