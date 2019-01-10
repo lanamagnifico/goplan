@@ -32,16 +32,4 @@ public class HomeControllerTest {
         mockMvc.perform(get("/"))
                 .andExpect(view().name("home"));
     }
-
-    @Test
-    public void testLoginPage() throws Exception {
-        mockMvc.perform(get("/login"))
-                .andExpect(view().name("login"));
-    }
-
-    @Test
-    public void testShowRegistrationForm() throws Exception {
-        mockMvc.perform(get("/register"))
-                .andExpect(view().name("registerForm"));
-    }
 }

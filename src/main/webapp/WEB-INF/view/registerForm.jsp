@@ -11,8 +11,7 @@
   </head>
   <body>
     <h1>Register</h1>
-    <sf:form method="POST" commandName="user"
-         enctype="multipart/form-data">
+    <sf:form method="POST" commandName="user">
       <sf:label path="name"
             cssErrorClass="error"> Name:
       </sf:label>

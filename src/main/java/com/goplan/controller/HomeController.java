@@ -19,24 +19,4 @@ public class HomeController {
     public String homePage(ModelMap model){
        return "home";
     }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage(ModelMap model) {
-        return "login";
-    }
-
-    @RequestMapping(value="/logout", method = RequestMethod.GET)
-    public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null){
-            new SecurityContextLogoutHandler().logout(request, response, auth);
-        }
-        return "redirect:/login?logout";
-    }
-
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public String showRegistrationForm(ModelMap model) {
-        model.addAttribute(new User());
-        return "registerForm";
-    }
 }
