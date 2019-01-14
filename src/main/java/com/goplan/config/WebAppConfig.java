@@ -18,12 +18,12 @@ import java.io.IOException;
 @EnableWebMvc
 @ComponentScan("com.goplan")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
-    /*@Override
+    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/pages*//**").addResourceLocations("/pages/");
+        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
         registry.addResourceHandler("/tmp/uploads*//**").addResourceLocations("/tmp/uploads/");
         registry.addResourceHandler("/favicon.ico").addResourceLocations("/favicon.ico");
-    }*/
+    }
 
    /* @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -37,7 +37,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         resolver.setPrefix("/WEB-INF/view/");
         resolver.setSuffix(".jsp");
         resolver.setViewClass(JstlView.class);
-        resolver.setContentType("text/html; charset=utf-8");
+        //resolver.setContentType("text/html; charset=utf-8");
         return resolver;
     }
 
