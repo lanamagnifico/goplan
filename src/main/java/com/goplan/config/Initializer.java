@@ -44,10 +44,10 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
         servlet.setLoadOnStartup(1);
         servlet.setInitParameter("throwExceptionIfNoHandlerFound", "true");
 
-        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("encodingFilter",
-                new CharacterEncodingFilter());
-        filterRegistration.setInitParameter("encoding", "UTF-8");
-        filterRegistration.setInitParameter("forceEncoding", "true");
-        filterRegistration.addMappingForUrlPatterns(null,true,"/*");
+        //FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("encodingFilter",
+        //        new CharacterEncodingFilter());
+        //filterRegistration.setInitParameter("encoding", "UTF-8");
+        //filterRegistration.setInitParameter("forceEncoding", "true");
+        //filterRegistration.addMappingForUrlPatterns(null,true,"/*");
     }
 }
